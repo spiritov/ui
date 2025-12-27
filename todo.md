@@ -20,6 +20,7 @@ used in Jump Fortress ui
 - [ ] class select
 - [ ] division tags
 - [ ] competition overview
+- [ ] player profile
 
 ### table
 
@@ -29,6 +30,6 @@ used in Jump Fortress ui
 ### player profile
 
 - [ ] player profile
-- [ ] player overview (part of player profile)
-- [ ] points (part of player profile)
-- [ ] rocket launcher (part of player profile)
+- [ ] player overview
+- [ ] points
+- [ ] rocket launcher
