@@ -22,8 +22,10 @@
 
   --font-theme: 'fredoka', 'ui-sans-serif', 'sans-serif', 'system-ui';
 
+  /* 0.75rem for rounded-xl */
+  --radius-layout: 0.5rem;
   /* 0.375rem for rounded-md */
-  --radius-theme: 0.375rem;
+  --radius-box: 0.375rem;
 }
 @layer base {
   :root {
