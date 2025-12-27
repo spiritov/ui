@@ -8,7 +8,7 @@
   let route = $derived(page.url.pathname);
 
   const session = {
-    displayName: 'dreambreak',
+    displayName: 'dreambreakkkkerrrrrr',
     id: '765',
     role: 'Admin',
     steamAvatarUrl:
