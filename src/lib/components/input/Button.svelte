@@ -16,7 +16,7 @@
 </script>
 
 <button
-  class="relative flex h-10 w-fit cursor-pointer items-center rounded-theme border border-base-700 border-b-content/50 bg-base-800 px-2 transition-colors hover:border-content/50 hover:bg-base-900"
+  class="relative flex h-10 w-fit cursor-pointer items-center rounded-box border border-base-700 border-b-content/50 bg-base-800 px-2 transition-colors hover:border-content/50 hover:bg-base-900"
   onclick={() => {
     response = onsubmit();
   }}>

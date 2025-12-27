@@ -10,7 +10,7 @@
   {#if response?.message}
     <span
       class="pointer-events-none absolute left-full ml-2 flex h-full items-center
-          {response.error ? 'text-error' : 'text-success'}">
+          {response.error ? 'text-error' : 'text-primary'}">
       {response.message}
     </span>
   {/if}

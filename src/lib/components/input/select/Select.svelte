@@ -90,7 +90,7 @@
 <!-- submit button & response -->
 <button
   in:fade
-  class="relative grid size-10 cursor-pointer place-content-center text-primary"
+  class="relative grid size-10 cursor-pointer place-content-center"
   title="submit"
   onclick={() => {
     if (value) {
@@ -104,7 +104,7 @@
 <!-- options -->
 {#if showOptions && derivedOptions.length}
   <div
-    class="absolute top-full -left-px z-40 flex max-h-60 w-7/8 flex-col overflow-x-hidden overflow-y-auto border border-content/50 bg-base-900">
+    class="absolute top-full -left-px z-40 flex max-h-60 w-7/8 flex-col overflow-x-hidden overflow-y-auto rounded-b-box border border-content/50 bg-base-900 py-1 pr-3">
     {#each derivedOptions as option, i}
       <Option
         value={option}
