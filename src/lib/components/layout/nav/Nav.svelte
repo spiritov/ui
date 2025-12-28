@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { slide } from 'svelte/transition';
-  import steam_signin from '$lib/assets/components/sits_small.png';
+  import steam_signin from '$lib/assets/components/nav/sits_small.png';
   import NavSession from './Session.svelte';
 
   type Props = {
