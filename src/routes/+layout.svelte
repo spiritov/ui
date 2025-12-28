@@ -9,7 +9,7 @@
 
   const session = {
     displayName: 'dreambreaker',
-    id: '765',
+    id: '1',
     role: 'Admin',
     steamAvatarUrl:
       'https://avatars.fastly.steamstatic.com/a601329884762a3ae565a8cf369ef9f4178b0daf_full.jpg'
