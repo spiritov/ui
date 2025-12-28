@@ -1,4 +1,6 @@
 <script module>
+  // @ts-nocheck
+
   import '../routes/layout.css';
 
   import { defineMeta } from '@storybook/addon-svelte-csf';
