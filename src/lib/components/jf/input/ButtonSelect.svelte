@@ -17,7 +17,7 @@
 
 <!-- container for input -->
 <label
-  class="relative mt-2 flex w-fit rounded-box border border-base-700 bg-base-800 transition-colors focus-within:border-content/50 hover:border-content/50">
+  class="relative mt-2 flex w-fit rounded-box border border-base-700 bg-base-800 transition-colors hover:border-content/50">
   <!-- label -->
   <span class="absolute -top-1 left-2 bg-base-800 px-1 text-sm leading-1">{label}</span>
   <!-- input container -->
@@ -25,13 +25,14 @@
     {#each options as { value, src }}
       {@const isSelected: boolean = selected === value}
       <button
-        class="rounded-box {isSelected ? 'bg-base-900' : 'bg-base-800'} group"
+        class="cursor-pointer rounded-box
+         {isSelected ? 'bg-base-900' : 'bg-base-800'}"
         onclick={() => {
           onsubmit(value);
           selected = value;
         }}>
         <img
-          class="w-20 px-2 group-hover:opacity-100 {isSelected ? '' : 'opacity-50'}"
+          class="w-20 px-2 {isSelected ? '' : 'opacity-50 hover:opacity-100'}"
           {src}
           alt=""
           draggable="false" />
@@ -42,14 +43,13 @@
       {@const isSelected: boolean = selected === 'None'}
       <!-- svelte-ignore a11y_consider_explicit_label -->
       <button
-        class="group grid w-20 place-content-center rounded-box
+        class="grid w-20 cursor-pointer place-content-center rounded-box
         {isSelected ? 'bg-base-900' : 'bg-base-800'}"
         onclick={() => {
           onsubmit('None');
           selected = 'None';
         }}>
-        <span
-          class="icon-[mdi--close] size-6 group-hover:opacity-100 {isSelected ? '' : 'opacity-50'}"
+        <span class="icon-[mdi--close] size-6 {isSelected ? '' : 'opacity-50 hover:opacity-100'}"
         ></span>
       </button>
     {/if}
