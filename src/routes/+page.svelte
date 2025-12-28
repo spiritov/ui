@@ -13,6 +13,7 @@
   import Division from '$lib/components/jf/display/Division.svelte';
   import TablePlayer from '$lib/components/display/table/Player.svelte';
   import Map from '$lib/components/display/table/Map.svelte';
+  import Header from '$lib/components/jf/display/profile/Header.svelte';
 
   let route = $derived(page.url.pathname);
 
@@ -32,6 +33,8 @@
     tempus_id: 1
   };
 </script>
+
+<Header {player} />
 
 <div class="prose text-content">
   <code class="bg-base-900 p-1 text-primary">npm run storybook</code>
