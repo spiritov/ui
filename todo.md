@@ -7,7 +7,7 @@
 - [x] select input (options or autofill)
 - [x] section
 - [x] nav
-- [ ] inner nav
+- [x] inner nav
 - [x] flag
 - [ ] link with thumbnail
 - [ ] table
