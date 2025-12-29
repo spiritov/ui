@@ -19,7 +19,7 @@ used in Jump Fortress ui
 ### general components
 
 - [x] button select
-- [ ] class select
+- [x] class select
 - [x] division tags
 - [ ] competition overview
 - [ ] player profile
@@ -33,6 +33,6 @@ used in Jump Fortress ui
 ### player profile
 
 - [ ] player profile
-- [ ] player overview
+- [x] player overview
 - [ ] points
 - [x] rocket launcher
