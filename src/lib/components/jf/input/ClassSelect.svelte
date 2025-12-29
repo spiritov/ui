@@ -17,7 +17,6 @@
   class="cursor-pointer p-2 transition-opacity
   {selected === 'Demo' ? 'opacity-25 hover:opacity-75' : ''}"
   onclick={() => {
-    console.log('clicked');
     onsubmit('Soldier');
     selected = 'Soldier';
   }}>

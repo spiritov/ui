@@ -39,6 +39,17 @@ declare global {
     steam_avatar_url: string;
     tempus_id?: number;
   };
+
+  type ClassPoints = {
+    last_3_monthly: number;
+    last_9_motw: number;
+    total: number;
+  };
+
+  type PlayerPoints = {
+    demo: ClassPoints;
+    soldier: ClassPoints;
+  };
 }
 
 export {};

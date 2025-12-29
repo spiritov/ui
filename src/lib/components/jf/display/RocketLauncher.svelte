@@ -10,7 +10,7 @@
   ]);
 
   type Props = {
-    launcher: 'Stock' | 'Original' | 'Mangler';
+    launcher: string;
   };
 
   let { launcher }: Props = $props();

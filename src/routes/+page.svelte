@@ -32,9 +32,24 @@
       'https://avatars.fastly.steamstatic.com/a601329884762a3ae565a8cf369ef9f4178b0daf_full.jpg',
     tempus_id: 1
   };
+
+  const points: PlayerPoints = {
+    soldier: {
+      last_3_monthly: 123,
+      last_9_motw: 456,
+      total: 78910
+    },
+    demo: {
+      last_3_monthly: 1112,
+      last_9_motw: 1314,
+      total: 151617
+    }
+  };
+
+  let selected_class = $state('Soldier');
 </script>
 
-<Header {player} />
+<Header {player} {points} bind:selected={selected_class} />
 
 <div class="prose text-content">
   <code class="bg-base-900 p-1 text-primary">npm run storybook</code>
