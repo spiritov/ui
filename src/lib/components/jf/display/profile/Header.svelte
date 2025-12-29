@@ -4,13 +4,17 @@
 
   import Flag from '$lib/components/display/Flag.svelte';
   import Link from '$lib/components/display/Link.svelte';
-  import SelectClass from '../../input/SelectClass.svelte';
+  import ClassSelect from '../../input/ClassSelect.svelte';
+  import RocketLauncher from '../RocketLauncher.svelte';
+  import Points from './Points.svelte';
 
   type Props = {
     player: Player;
+    points?: PlayerPoints | null;
+    selected?: string;
   };
 
-  let { player }: Props = $props();
+  let { player, points = null, selected = $bindable(player.preferred_class) }: Props = $props();
 </script>
 
 <!-- container -->
@@ -26,9 +30,22 @@
     <span class="rounded-layout bg-base-900 px-2 py-1 pb-12 text-2xl text-primary"
       >{player.display_name}</span>
   </div>
-  <!-- absolute class select -->
-  <div class="absolute right-8 bottom-0.5 z-20 flex">
-    <SelectClass selected={player.preferred_class} onsubmit={() => {}} />
+  <!-- absolute bottom, class select & points -->
+  <div class="absolute right-8 bottom-1 z-20 flex flex-row-reverse items-end">
+    <div class="flex">
+      <ClassSelect
+        selected={player.preferred_class}
+        onsubmit={(value) => {
+          selected = value;
+        }} />
+    </div>
+    {#if points}
+      {@const selected_points = selected === 'Soldier' ? points.soldier : points.demo}
+      <Points points={selected_points} />
+    {/if}
+    <div class="relative bottom-5 left-7 -rotate-60">
+      <RocketLauncher launcher={'Stock'} />
+    </div>
   </div>
 
   <!-- top, map bg image -->
@@ -41,9 +58,16 @@
     <div class="flex items-center gap-1 text-content/75">
       <Flag code={player.country_code} country={player.country} />
       <span class="icon-[mdi--circle-medium] size-3.5"></span>
-      <span class="text-division-{player.soldier_division?.toLowerCase() ?? ''}">
-        {player.soldier_division} Soldier
-      </span>
+      {#if selected === 'Soldier'}
+        <span class="text-division-{player.soldier_division?.toLowerCase() ?? ''}">
+          {player.soldier_division ?? 'Divisionless'} Soldier
+        </span>
+        <!-- demo -->
+      {:else}
+        <span class="text-division-{player.demo_division?.toLowerCase() ?? ''}">
+          {player.demo_division ?? 'Divisionless'} Demo
+        </span>
+      {/if}
     </div>
   </div>
   <!-- bottom, links -->
