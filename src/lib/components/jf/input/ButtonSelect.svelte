@@ -11,8 +11,6 @@
   };
 
   let { label, options, withNone = false, selected, onsubmit }: Props = $props();
-
-  $inspect(selected);
 </script>
 
 <!-- container for input -->
