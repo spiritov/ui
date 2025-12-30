@@ -19,8 +19,9 @@
   onclick={() => {
     onsubmit('Soldier');
     selected = 'Soldier';
-  }}>
-  <img class="max-w-16 object-cover" src={soldier} alt="" />
+  }}
+  draggable="false">
+  <img class="filter-lavender max-w-16 object-cover" src={soldier} alt="" />
 </button>
 <!-- demo -->
 <button
@@ -29,14 +30,7 @@
   onclick={() => {
     onsubmit('Demo');
     selected = 'Demo';
-  }}>
-  <img class="max-w-16 object-cover" src={demo} alt="" />
+  }}
+  draggable="false">
+  <img class="filter-lavender max-w-16 object-cover" src={demo} alt="" />
 </button>
-
-<style>
-  /* match theme content color */
-  img {
-    filter: brightness(0) saturate(100%) invert(97%) sepia(49%) saturate(6023%) hue-rotate(179deg)
-      brightness(100%) contrast(108%);
-  }
-</style>

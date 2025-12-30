@@ -30,7 +30,7 @@
           selected = value;
         }}>
         <img
-          class="w-20 px-2 {isSelected ? '' : 'opacity-50 hover:opacity-100'}"
+          class="filter-lavender w-20 px-2 {isSelected ? '' : 'opacity-50 hover:opacity-100'}"
           {src}
           alt=""
           draggable="false" />
@@ -53,11 +53,3 @@
     {/if}
   </div>
 </label>
-
-<style>
-  /* match theme content color */
-  img {
-    filter: brightness(0) saturate(100%) invert(97%) sepia(49%) saturate(6023%) hue-rotate(179deg)
-      brightness(100%) contrast(108%);
-  }
-</style>

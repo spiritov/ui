@@ -14,6 +14,7 @@
   import TablePlayer from '$lib/components/display/table/Player.svelte';
   import Map from '$lib/components/display/table/Map.svelte';
   import Header from '$lib/components/jf/display/profile/Header.svelte';
+  import Competition from '$lib/components/jf/display/Competition.svelte';
 
   let route = $derived(page.url.pathname);
 
@@ -46,10 +47,18 @@
     }
   };
 
+  const maps = [
+    { name: 'jump_flood', divisions: ['Wood', 'Steel', 'Bronze'] },
+    { name: 'jump_escape_rc4', divisions: ['Silver', 'Gold'] },
+    { name: 'jump_temple_final', divisions: ['Platinum', 'Diamond'] }
+  ];
+
   let selected_class = $state('Soldier');
 </script>
 
 <Header {player} {points} bind:selected={selected_class} />
+
+<Competition {maps} />
 
 <div class="prose text-content">
   <code class="bg-base-900 p-1 text-primary">npm run storybook</code>

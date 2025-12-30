@@ -16,12 +16,8 @@
   let { launcher }: Props = $props();
 </script>
 
-<img src={rlMap.get(launcher)} alt="" draggable="false" class="size-fit object-none select-none" />
-
-<style>
-  /* match theme content color */
-  img {
-    filter: brightness(0) saturate(100%) invert(97%) sepia(49%) saturate(6023%) hue-rotate(179deg)
-      brightness(100%) contrast(108%);
-  }
-</style>
+<img
+  class="filter-lavender size-fit object-none select-none"
+  src={rlMap.get(launcher)}
+  alt=""
+  draggable="false" />
