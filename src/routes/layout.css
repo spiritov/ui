@@ -39,6 +39,16 @@
   --color-division-diamond: #94e2d5;
 }
 
+/* reverse spin for spinning logo */
+@theme {
+  --animate-reverse-spin: reverse-spin 1s infinite;
+  @keyframes reverse-spin {
+    from {
+      transform: rotate(360deg);
+    }
+  }
+}
+
 @layer base {
   :root {
     @apply bg-base-900 font-theme text-base text-content selection:bg-primary/50 selection:text-content;
