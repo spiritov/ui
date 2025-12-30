@@ -3,18 +3,18 @@
   import Link from '$lib/components/display/Link.svelte';
   import Table from '$lib/components/display/table/Table.svelte';
   import Button from '$lib/components/input/Button.svelte';
-  import ButtonSelect from '$lib/components/jf/input/ButtonSelect.svelte';
+  import SelectButton from '$lib/components/input/select/SelectButton.svelte';
   import InnerNav from '$lib/components/layout/InnerNav.svelte';
   import Section from '$lib/components/layout/Section.svelte';
 
   import rl_stock from '$lib/assets/tf/rl_stock.png';
   import rl_original from '$lib/assets/tf/rl_original.png';
   import rl_mangler from '$lib/assets/tf/rl_mangler.png';
-  import Division from '$lib/components/jf/display/Division.svelte';
-  import TablePlayer from '$lib/components/display/table/Player.svelte';
-  import Map from '$lib/components/display/table/Map.svelte';
-  import Header from '$lib/components/jf/display/profile/Header.svelte';
-  import Competition from '$lib/components/jf/display/Competition.svelte';
+  import DivisionTag from '$lib/components/display/DivisionTag.svelte';
+  import TablePlayer from '$lib/components/display/table/TablePlayer.svelte';
+  import TableMap from '$lib/components/display/table/TableMap.svelte';
+  import Header from '$lib/components/display/profile/Header.svelte';
+  import Competition from '$lib/components/display/Competition.svelte';
 
   let route = $derived(page.url.pathname);
 
@@ -95,12 +95,12 @@
       </td>
       <td class="text-ctp-lavender-50/75">4</td>
       <td class="text-ctp-lavender-50/75">10</td>
-      <td><Map map="jump_flood" /></td>
+      <td><TableMap map="jump_flood" /></td>
       <td>900000</td>
     {/snippet}
   </Table>
 
-  <ButtonSelect
+  <SelectButton
     label="fav launcher"
     options={[
       { src: rl_stock, value: 'Stock' },
@@ -111,5 +111,5 @@
     selected="Original"
     onsubmit={(value: string) => {}} />
 
-  <Division div="Diamond" />
+  <DivisionTag div="Diamond" />
 </Section>

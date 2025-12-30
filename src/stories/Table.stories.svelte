@@ -6,9 +6,9 @@
   import { defineMeta } from '@storybook/addon-svelte-csf';
 
   import Table from '$lib/components/display/table/Table.svelte';
-  import TablePlayer from '$lib/components/display/table/Player.svelte';
-  import Division from '$lib/components/jf/display/Division.svelte';
-  import Map from '$lib/components/display/table/Map.svelte';
+  import TablePlayer from '$lib/components/display/table/TablePlayer.svelte';
+  import Division from '$lib/components/display/DivisionTag.svelte';
+  import TableMap from '$lib/components/display/table/TableMap.svelte';
 
   const { Story } = defineMeta({
     component: Table
@@ -165,7 +165,7 @@
       {#snippet row(player)}
         <td>{player.id}</td>
         <td><TablePlayer {player} /></td>
-        <td><Map map="jump_flood" /></td>
+        <td><TableMap map="jump_flood" /></td>
         <td><Division div={player.soldier_division} /></td>
       {/snippet}
     </Table>

@@ -1,7 +1,7 @@
 <script lang="ts">
   import soldier from '$lib/assets/tf/soldier.png';
 
-  import Division from './Division.svelte';
+  import DivisionTag from './DivisionTag.svelte';
 
   type Props = {
     maps: {
@@ -45,7 +45,7 @@
         <span class="truncate text-lg text-shadow-sm/100">{name}</span>
         <div class="flex gap-2">
           {#each divisions as division}
-            <Division div={division} />
+            <DivisionTag div={division} />
           {/each}
         </div>
       </div>
